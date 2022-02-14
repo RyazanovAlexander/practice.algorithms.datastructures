@@ -1,2 +1,2 @@
-# practice.algorithms.datastructures
-Collection of basic algorithms and data structures
+# Algorithms and Data Structures
+Collection of basic Algorithms and Data Structures
