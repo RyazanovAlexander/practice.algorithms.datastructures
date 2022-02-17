@@ -2,21 +2,20 @@ package main
 
 import (
 	"fmt"
-	"practice/datastructures/heap"
+
+	"practice/data/structures/collection/orderer"
+	"practice/data/structures/heap/binary"
 )
 
 func main() {
 	data := []int{16, 11, 9, 10, 5, 6, 8, 1, 2, 4}
-	binaryHeap := heap.Init(data)
+	heap := binary.Init(data, orderer.Create[int]())
 
-	binaryHeap.Push(99)
+	heap.Push(99)
+	fmt.Print(heap.Pop())
+	fmt.Print(heap.Peek())
+	fmt.Print(heap.Len())
 
-	value := binaryHeap.Pop()
-	fmt.Print(value)
-
-	value = binaryHeap.Peek()
-	fmt.Print(value)
-
-	value = binaryHeap.Len()
-	fmt.Print(value)
+	// Add complex structure
+	// Add 2 tests for demonstration
 }

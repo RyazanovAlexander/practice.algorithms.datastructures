@@ -1,4 +1,4 @@
-package heap
+package binary
 
 /*
 var intComparator primitives.Comparator[int] = func(left, right int) value.Compared {
