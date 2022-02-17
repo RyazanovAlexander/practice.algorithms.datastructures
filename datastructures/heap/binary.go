@@ -1,25 +1,34 @@
 package heap
 
-import (
-	"practice/primitives"
-)
-
-type binary[T any] struct {
-	value T
+type Interface[T any] interface {
+	Push(x T)
+	Pop() T
+	Peek() T
+	Len() int
 }
 
-func Create[T any](data []T, comparator primitives.Comparator[T]) (b *binary[T]) {
-	return nil
+type container[T any] struct {
+	heap []T
 }
 
-func (b *binary[T]) Peek() (value T) {
-	return b.value
+func Init[T any](data []T) Interface[T] {
+	return container[T]{
+		heap: data,
+	}
 }
 
-func (b *binary[T]) Extract() (value T) {
-	return b.value
+func (h container[T]) Push(x T) {
+
 }
 
-func (b *binary[T]) Push() {
+func (h container[T]) Pop() T {
+	return h.heap[0]
+}
 
+func (h container[T]) Peek() T {
+	return h.heap[0]
+}
+
+func (h container[T]) Len() int {
+	return len(h.heap)
 }

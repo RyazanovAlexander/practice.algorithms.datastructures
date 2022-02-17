@@ -18,7 +18,9 @@
             "request": "launch",
             "mode": "test",
             "program": "${file}",
-            "showLog": true,
-        }   
+            "env": {},
+            "args": [],
+            "showLog": true
+        }
     ]
 }
