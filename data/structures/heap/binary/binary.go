@@ -16,7 +16,7 @@ type container[T any] struct {
 	orderer collection.Orderer[T]
 }
 
-func Init[T any](data []T, orderer collection.Orderer[T]) Interface[T] {
+func Heapify[T any](data []T, orderer collection.Orderer[T]) Interface[T] {
 	return container[T]{
 		heap:    data,
 		orderer: orderer,

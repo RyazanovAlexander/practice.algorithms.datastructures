@@ -1,5 +1,5 @@
 package collection
 
 type Orderer[T any] interface {
-	Less(x, y T) bool
+	Ordered(x, y T) bool
 }
